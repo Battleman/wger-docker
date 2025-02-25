@@ -132,13 +132,13 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/mnt/nas-homelab/wger/postgres-data'
+      device: '/mnt/nas-homelab/wger/media'
   static:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/mnt/nas-homelab/wger/postgres-data'
+      device: '/mnt/nas-homelab/wger/static'
 
 networks:
   default:
