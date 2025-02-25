@@ -45,7 +45,11 @@ services:
       retries: 5
       start_period: 30s
     restart: unless-stopped
-
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.wger.rule=Host(`wger.cloux.dev`)
+      - traefik.http.routers.wger.entrypoints=websecure
+      - traefik.http.routers.wger.tls.certresolver=infomaniakdns
   db:
     image: postgres:15-alpine
     environment:
